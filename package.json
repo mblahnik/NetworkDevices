@@ -1,0 +1,23 @@
+{
+  "name": "networkdevices",
+  "version": "1.0.0",
+  "description": "Network Device App",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mblahnik/NetworkDevices.git"
+  },
+  "author": "Me",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mblahnik/NetworkDevices/issues"
+  },
+  "homepage": "https://github.com/mblahnik/NetworkDevices#readme",
+  "dependencies": {
+    "electron": "^7.1.11",
+    "local-devices": "^3.0.0"
+  }
+}

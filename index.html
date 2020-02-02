@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="bootstrap.min.css" />
+  <head>
+    <title>NetWork Devices</title>
+  </head>
+  <body>
+    <h1 class="jumbotron">NetWork Devices</h1>
+  </body>
+
+  <div id="list"></div>
+
+  <script>
+    const find = require('local-devices');
+    let listHtml = `
+    <table class="table"> 
+        <tr>
+            <th scope="col">Host Name</th>
+            <th scope="col">Ip Address</th>
+            <th scope="col">Mac Address</th>
+        </tr>
+        `;
+    find().then(dev => {
+      console.log(dev);
+      dev.map(x => {
+        listHtml = listHtml.concat(`
+        <tr> 
+            <td scope="row"> ${x.name} </td>
+            <td> ${x.ip} </td>
+            <td> ${x.mac} <td>
+        <tr>`);
+      });
+
+      listHtml = listHtml + '</table>';
+
+      document.getElementById('list').innerHTML = listHtml;
+    });
+  </script>
+</html>
