@@ -5,13 +5,13 @@
     <title>NetWork Devices</title>
   </head>
   <body>
-    <h1 class="jumbotron">NetWork Devices</h1>
+    <h1 class="jumbotron">Network Devices</h1>
   </body>
 
   <div id="list"></div>
 
   <script>
-    const find = require('local-devices');
+    const find = require("local-devices");
     let listHtml = `
     <table class="table"> 
         <tr>
@@ -31,9 +31,9 @@
         <tr>`);
       });
 
-      listHtml = listHtml + '</table>';
+      listHtml = listHtml + "</table>";
 
-      document.getElementById('list').innerHTML = listHtml;
+      document.getElementById("list").innerHTML = listHtml;
     });
   </script>
 </html>
