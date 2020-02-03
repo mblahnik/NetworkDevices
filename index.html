@@ -2,7 +2,7 @@
 <html lang="en">
   <link rel="stylesheet" href="bootstrap.min.css" />
   <head>
-    <title>NetWork Devices</title>
+    <title>Network Devices</title>
   </head>
   <body>
     <h1 class="jumbotron">Network Devices</h1>
@@ -21,7 +21,6 @@
         </tr>
         `;
     find().then(dev => {
-      console.log(dev);
       dev.map(x => {
         listHtml = listHtml.concat(`
         <tr> 

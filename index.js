@@ -1,6 +1,6 @@
-const electron = require('electron');
-const url = require('url');
-const path = require('path');
+const electron = require("electron");
+const url = require("url");
+const path = require("path");
 
 const { app, BrowserWindow, Menu } = electron;
 
@@ -8,9 +8,7 @@ let mainWindow;
 
 // Listen for app to be ready
 
-app.on('ready', function() {
-  //find().then(devices => console.log(devices));
-
+app.on("ready", function() {
   // Create new window
   mainWindow = new BrowserWindow({
     webPreferences: { nodeIntegration: true }
@@ -18,13 +16,13 @@ app.on('ready', function() {
   // Load html into window
   mainWindow.loadURL(
     url.format({
-      pathname: path.join(__dirname, 'index.html'),
-      protocol: 'file:',
+      pathname: path.join(__dirname, "index.html"),
+      protocol: "file:",
       slashes: true
     })
   );
   // Quit app when closed
-  mainWindow.on('closed', function() {
+  mainWindow.on("closed", function() {
     app.quit();
   });
 
