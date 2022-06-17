@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/mblahnik/NetworkDevices#readme",
   "dependencies": {
-    "electron": "^7.1.11",
+    "electron": "^15.5.5",
     "local-devices": "^3.0.0"
   }
 }
